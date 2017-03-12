@@ -1,7 +1,5 @@
 # Smartwatch - Gif Weather App
 
-Live version: https://piotrberebecki.github.io/smartwatch-gif-weather-app
-
 Project completed together with [Joey Scott](https://github.com/joeylouise), [Lucy Sabin](https://github.com/lucyrose93) and [Zooey Miller](https://github.com/ZooeyMiller)
 
 ## Introduction
