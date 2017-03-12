@@ -1,78 +1,82 @@
-html{
-  height: 100%;
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: 'Baloo Bhaina', Helvetica, Arial, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
-.text-box {
+.app {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.smartwatch {
+  width: 100%;
+  height: auto;
+}
+
+.display {
+  position: absolute;
+  top: 37.1%;
+  left: 32.1%;
+  width: 154px;
+  height: 154px;
+  background-color: rgb(1, 1, 1);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.text {
+  position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  box-shadow: 10px 10px 5px black;
-  text-shadow: 2px 3px white;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  width: 154.5px;
+  height: 154.5px;
+  padding-bottom: 10px;
+  border-radius: 50%;
+  background-image:
+    -webkit-linear-gradient(
+      bottom,
+      rgb(1, 1, 1),
+      rgb(1, 1, 1) 30%,
+      rgba(255,255,255, 0) 30%
+    );
+  background-image:
+    linear-gradient(
+      bottom,
+      rgb(1, 1, 1),
+      rgb(1, 1, 1) 30%,
+      rgba(255,255,255, 0) 30%
+    );
 }
 
-.title {
-  font-size: 3rem;
-  color: black;
-  text-align: center;
+.weather {
+  display: flex;
+  font-size: 1rem;
+  color: #eee;
+  text-shadow: 0px 0px 15px #fff;
 }
-
-.city, .summary, .temperature {
-  font-size: 2rem;
-}
-
 
 .summary {
-  animation: pulse 3s infinite;
+  margin-right: 10px;
+  margin-bottom: 2px;
 }
 
-
-@keyframes pulse {
-  0% {
-    font-size: 4rem;
-  }
-  100% {
-    font-size: 2rem;
-  }
-}
-
-
-@media (max-width: 520px) {
-  .text-box {
-    max-width: 50%;
-  }
-  .title {
-    font-size: 2rem;
-  }
-  .city, .summary, .temperature {
-    font-size: 1.5rem;
-  }
-}
-
-.latitude{
-  display: none;
-}
-
-.longitude{
-  display: none;
-}
-
-.description{
-  display: none;
-}
-
-.image{
-  max-width: 8rem;
+.city {
+  font-size: 0.5rem;
+  color: #ccc;
+  text-shadow: 0px 0px 10px #fff;
 }
